@@ -1,7 +1,7 @@
 {
-  "name": "got-quote-generator",
+  "name": "got-quotes-generator",
   "version": "1.0.0",
-  "description": "A Game of Thrones Quote Generator",
+  "description": "A Game of Thrones Quotes Generator",
   "main": "index.js",
   "scripts": {
     "test": "jest"
