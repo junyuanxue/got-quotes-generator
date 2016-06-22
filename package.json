@@ -18,11 +18,29 @@
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
+    "babel-jest": "^13.0.0",
     "babel-loader": "^6.2.4",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-jest": "^13.0.0",
     "babel-preset-react": "^6.5.0",
     "html-webpack-plugin": "^2.21.0",
     "jest-cli": "^13.0.0",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "jest": {
+    "modulePaths": [
+      "/shared/vendor/modules"
+    ],
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules", "bower_components", "shared"],
+
+    "moduleNameMapper": {
+      "^react": "<rootDir>/vendor/react-master",
+      "^config$": "<rootDir>/configs/app-config.js",
+
+      "^.+\\.(css|less)$": "<rootDir>/test/styleMock.js",
+      "^.+\\.(gif|ttf|eot|svg)$": "<rootDir>/test/fileMock.js",
+    }
   }
 }
