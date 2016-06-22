@@ -29,6 +29,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "jest": {
+    "testDirectoryName": "__test__",
     "modulePaths": [
       "/shared/vendor/modules"
     ],
@@ -40,7 +41,7 @@
       "^config$": "<rootDir>/configs/app-config.js",
 
       "^.+\\.(css|less)$": "<rootDir>/test/styleMock.js",
-      "^.+\\.(gif|ttf|eot|svg)$": "<rootDir>/test/fileMock.js",
+      "^.+\\.(gif|ttf|eot|svg)$": "<rootDir>/test/fileMock.js"
     }
   }
 }
