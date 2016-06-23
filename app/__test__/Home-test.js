@@ -1,10 +1,10 @@
-jest.unmock('../containers/Home')
+jest.unmock('../containers/HomeContainer')
 jest.unmock('../components/Home')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
-import HomeContainer from '../containers/Home'
+import HomeContainer from '../containers/HomeContainer'
 
 describe('Home', () => {
 

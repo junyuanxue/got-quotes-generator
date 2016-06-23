@@ -33,6 +33,11 @@
   },
   "jest": {
     "testDirectoryName": "__test__",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react/",
+      "<rootDir>/node_modules/react-dom/",
+      "<rootDir>/node_modules/react-addons-test-utils/"
+    ],
     "modulePaths": [
       "/shared/vendor/modules"
     ],
@@ -46,7 +51,6 @@
       "shared"
     ],
     "moduleNameMapper": {
-      "^react": "<rootDir>/vendor/react-master",
       "^config$": "<rootDir>/configs/app-config.js",
       "^.+\\.(css|less)$": "<rootDir>/test/styleMock.js",
       "^.+\\.(gif|ttf|eot|svg)$": "<rootDir>/test/fileMock.js"
