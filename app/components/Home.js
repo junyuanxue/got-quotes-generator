@@ -3,7 +3,9 @@ import React from 'react'
 function Home (props) {
   return (
     <div>
-      Hello from Home Component!!
+      <button className='get-quote'>
+        Get Quote
+      </button>
     </div>
   )
 }
