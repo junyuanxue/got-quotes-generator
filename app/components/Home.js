@@ -4,7 +4,7 @@ function Home (props) {
   return (
     <div>
       <button className='get-quote'>
-        Get Quote
+        New Quote
       </button>
     </div>
   )

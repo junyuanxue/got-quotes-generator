@@ -18,7 +18,20 @@ describe('Home', () => {
   })
 
   it('has a button that gets a GoT quote', () => {
-    let button = TestUtils.findRenderedDOMComponentWithClass(home, 'get-quote')
-    expect(button).toBeDefined()
+    let getQuote = TestUtils.findRenderedDOMComponentWithClass(home, 'get-quote')
+    expect(getQuote).toBeDefined()
+  })
+
+  it('gets a GoT quote', () => {
+    let mockQuote = 'I drink and I know things.'
+    let mockCharacter = 'Tyrion'
+
+    let getQuote = TestUtils.findRenderedDOMComponentWithClass(home, 'get-quote')
+    TestUtils.Simulate.click(getQuote)
+    let quote = TestUtils.findRenderedDOMComponentsWithClass(home, 'quote')
+    let character = TestUtils.findRenderedDOMComponentsWithClass(home, 'character')
+
+    expect(quote.textContent).toEqual(mockQuote)
+    expect(character.textContent).toEqual(mockCharacter)
   })
 })
