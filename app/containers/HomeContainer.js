@@ -3,20 +3,31 @@ import Home from '../components/Home'
 import {getQuote} from '../utils/gotQuotesApi'
 
 class HomeContainer extends React.Component {
-  
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      quote: '',
+      character: ''
+    }
+  }
 
   handleGetQuote() {
     getQuote()
       .then((quoteData) => {
-        console.log(quoteData.quote)
-        console.log(quoteData.character)
+        this.setState({
+          quote: quoteData.quote,
+          character: quoteData.character
+        })
       })
   }
 
   render() {
     return (
       <Home
-        onGetQuote={this.handleGetQuote} />
+        onGetQuote={this.handleGetQuote.bind(this)}
+        quote={this.state.quote}
+        character={this.state.character} />
     )
   }
 }
