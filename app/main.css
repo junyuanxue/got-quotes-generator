@@ -1,0 +1,17 @@
+body {
+  background-image: url('http://www.hbo.com/assets/images/series/game-of-thrones/downloads/stark/stark-twitter.jpg');
+  background-size: auto;
+  background-repeat: no-repeat;
+  min-width: 800px;
+}
+
+.jumbotron {
+  background-color: transparent;
+  margin-top: 10%;
+  margin-left: 27%;
+  width: 60%;
+}
+
+.btn {
+  margin-bottom: 30px;
+}

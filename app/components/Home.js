@@ -3,13 +3,13 @@ import React, {PropTypes} from 'react'
 function Home (props) {
   return (
     <div className='jumbotron text-center'>
-      <p>{props.quote}</p>
-      <p>{props.character}</p>
       <button
         className='get-quote btn btn-success'
         onClick={props.onGetQuote}>
         New Quote
       </button>
+      <p>{props.quote}</p>
+      <p>{props.character}</p>
     </div>
   )
 }
