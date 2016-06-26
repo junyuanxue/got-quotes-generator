@@ -21,7 +21,7 @@ $ npm start
 Visit `http://localhost:8080` in your browser.
 
 It even says 'Hodor':
-![Imgur](http://i.imgur.com/GznkBLH.png)
+![Imgur](http://i.imgur.com/O3EBD3c.png)
 
 Enjoy! :sunglasses:
 
