@@ -19,3 +19,22 @@ Start webpack:
 $ npm start
 ```
 Visit `http://localhost:8080` in your browser.
+
+It even says 'Hodor':
+![Imgur](http://i.imgur.com/GznkBLH.png)
+
+Enjoy! :sunglasses:
+
+## Tools :wrench:
+* React
+* jQuery
+* Jest
+* TestUtils
+* [GoT Quotes API](https://github.com/wsizoo/game-of-thrones-quotes)
+
+## Author :cat:
+Junyuan Xue
+
+[Github](https://github.com/junyuanxue)
+| [CV](https://github.com/junyuanxue/cv)
+| [Blog](https://spinningcodes.wordpress.com/)
