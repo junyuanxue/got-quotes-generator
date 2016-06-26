@@ -13,10 +13,6 @@ class HomeContainer extends React.Component {
   }
 
   handleGetQuote() {
-    console.log('***********')
-    console.log(getQuote())
-    console.log('***********')
-
     getQuote()
       .then((quoteData) => {
         this.setState({

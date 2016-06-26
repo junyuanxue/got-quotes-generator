@@ -2,11 +2,11 @@ import React, {PropTypes} from 'react'
 
 function Home (props) {
   return (
-    <div>
+    <div className='jumbotron text-center'>
       <p>{props.quote}</p>
       <p>{props.character}</p>
       <button
-        className='get-quote'
+        className='get-quote btn btn-success'
         onClick={props.onGetQuote}>
         New Quote
       </button>

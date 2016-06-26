@@ -34,15 +34,11 @@ describe('Home', () => {
     getQuote.mockReturnValue(mockQuoteData)
     let getQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'get-quote')
     TestUtils.Simulate.click(getQuoteButton)
-    console.log(getQuote.mock.calls)
-    console.log('clicked button')
 
-    expect(getQuote).toBeCalled()
+    let quote = TestUtils.findRenderedDOMComponentsWithClass(home, 'quote')
+    let character = TestUtils.findRenderedDOMComponentsWithClass(home, 'character')
 
-    // let quote = TestUtils.findRenderedDOMComponentsWithClass(home, 'quote')
-    // let character = TestUtils.findRenderedDOMComponentsWithClass(home, 'character')
-    //
-    // expect(quote.textContent).toEqual(mockQuote)
-    // expect(character.textContent).toEqual(mockCharacter)
+    expect(quote.textContent).toEqual(mockQuote)
+    expect(character.textContent).toEqual(mockCharacter)
   })
 })
