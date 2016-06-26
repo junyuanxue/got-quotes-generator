@@ -1,9 +1,11 @@
 import $ from 'jquery'
 
-const URL = 'https://got-quotes.herokuapp.com/quotes'
+const BASE = 'https://got-quotes.herokuapp.com/quotes'
 
-export function getQuote() {
-  return $.get(URL, (quoteData) => {
+export function getQuote(character) {
+  let query = '?char=' + character
+  let url = BASE + query
+  return $.get(url, (quoteData) => {
     return quoteData
   })
 }

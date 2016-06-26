@@ -13,14 +13,18 @@ class HomeContainer extends React.Component {
     }
   }
 
-  handleGetQuote() {
-    getQuote()
+  getQuoteAndSetState(character) {
+    getQuote(character)
       .then((quoteData) => {
         this.setState({
           quote: quoteData.quote,
           character: quoteData.character
         })
       })
+  }
+
+  handleGetQuote() {
+    this.getQuoteAndSetState('')
   }
 
   handleUpdateCharacter(event) {
@@ -30,8 +34,7 @@ class HomeContainer extends React.Component {
   }
 
   handleSubmitCharacter(event) {
-    event.preventDefault()
-
+    this.getQuoteAndSetState(this.state.searchCharacter)
   }
 
   render() {
