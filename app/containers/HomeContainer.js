@@ -8,7 +8,8 @@ class HomeContainer extends React.Component {
 
     this.state = {
       quote: '',
-      character: ''
+      character: '',
+      searchCharacter: ''
     }
   }
 
@@ -22,10 +23,23 @@ class HomeContainer extends React.Component {
       })
   }
 
+  handleUpdateCharacter(event) {
+    this.setState({
+      searchCharacter: event.target.value
+    })
+  }
+
+  handleSubmitCharacter(event) {
+    event.preventDefault()
+
+  }
+
   render() {
     return (
       <Home
         onGetQuote={this.handleGetQuote.bind(this)}
+        onSubmitCharacter={this.handleSubmitCharacter.bind(this)}
+        onUpdateCharacter={this.handleUpdateCharacter.bind(this)}
         quote={this.state.quote}
         character={this.state.character} />
     )

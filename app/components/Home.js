@@ -5,7 +5,8 @@ function GetQuoteByCharacter (props) {
     <div className='get-quote-by-char'>
       <input
         className='form-control'
-        placeholder='Jon Snow, Tyrion, Hodor' />
+        placeholder='Jon Snow, Tyrion, Hodor'
+        onChange={props.onUpdateCharacter} />
       <button
         className='btn btn-success'
         onClick={props.onSubmitCharacter}>
@@ -24,7 +25,9 @@ function Home (props) {
           onClick={props.onGetQuote}>
           Random Quote
         </button>
-        <GetQuoteByCharacter onSubmitCharacter={props.onSubmitCharacter}/>
+        <GetQuoteByCharacter
+          onSubmitCharacter={props.onSubmitCharacter}
+          onUpdateCharacter={props.onUpdateCharacter} />
       </div>
       <p className='quote'>{props.quote}</p>
       <p className='character'>{props.character}</p>
@@ -35,6 +38,7 @@ function Home (props) {
 Home.propTypes = {
   onGetQuote: PropTypes.func.isRequired,
   onSubmitCharacter: PropTypes.func.isRequired,
+  onUpdateCharacter: PropTypes.func.isRequired,
   quote: PropTypes.string.isRequired,
   character: PropTypes.string.isRequired
 }
