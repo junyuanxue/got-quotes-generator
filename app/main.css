@@ -7,11 +7,29 @@ body {
 
 .jumbotron {
   background-color: transparent;
-  margin-top: 10%;
+  margin-top: 6%;
   margin-left: 27%;
   width: 60%;
 }
 
 .btn {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  margin-left: 10px;
+}
+
+.character {
+  font-style: italic;
+}
+
+.form-control {
+  width: 180px;
+}
+
+.inline-flex, .get-quote-by-char {
+  display: inline-flex;
+}
+
+
+.get-quote-by-char {
+  margin-left: 60px;
 }
