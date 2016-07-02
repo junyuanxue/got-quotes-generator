@@ -33,3 +33,9 @@ body {
 .get-quote-by-char {
   margin-left: 60px;
 }
+
+.add-quote {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+}
