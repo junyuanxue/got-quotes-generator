@@ -42,8 +42,20 @@ describe('Home', () => {
     expect(character.textContent).toEqual(mockCharacter)
   })
 
-  it('has a button that prompts the user to add a new quote', () => {
-    let addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'add-quote')
-    expect(addQuoteButton).toBeDefined()
+  describe('add quote button', () => {
+    let addQuoteButton
+
+    beforeEach(() => {
+      addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'add-quote')
+    })
+
+    it('has a button that prompts the user to add a new quote', () => {
+      expect(addQuoteButton).toBeDefined()
+    })
+
+    it('links to the add quote page when add quote button is clicked', () => {
+      TestUtils.Simulate.click(addQuoteButton)
+      expect(window.location.pathname).toEqual('/add-quote')
+    })
   })
 })
