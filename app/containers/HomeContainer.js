@@ -65,7 +65,7 @@ class HomeContainer extends React.Component {
 }
 
 HomeContainer.contextTypes = {
-  router: React.PropTypes.func.isRequired
+  router: React.PropTypes.object.isRequired
 }
 
 export default HomeContainer
