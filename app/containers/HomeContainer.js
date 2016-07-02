@@ -48,7 +48,6 @@ class HomeContainer extends React.Component {
 
   handleClickAddQuote(event) {
     event.preventDefault()
-    console.log(this.context)
     this.context.router.push('/add-quote/')
   }
 

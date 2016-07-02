@@ -1,16 +1,21 @@
 jest.unmock('../containers/HomeContainer')
 jest.unmock('../components/Home')
+jest.unmock('react-stub-context')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
 import TestUtils from 'react-addons-test-utils'
+import stubContext from 'react-stub-context'
+
 import HomeContainer from '../containers/HomeContainer'
 
 describe('Home', () => {
-  let home
+  let home, Router, noop
 
   beforeEach(() => {
     home = TestUtils.renderIntoDocument(<HomeContainer />)
+    Router = function () {}
+    noop = function () {}
   })
 
   it('exits as a component', () => {
@@ -43,17 +48,22 @@ describe('Home', () => {
   })
 
   describe('add quote button', () => {
-    let addQuoteButton
-
-    beforeEach(() => {
-      addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'add-quote')
-    })
-
     it('has a button that prompts the user to add a new quote', () => {
+      let addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'add-quote')
       expect(addQuoteButton).toBeDefined()
     })
 
     it('links to the add quote page when add quote button is clicked', () => {
+      Router.makeHref = noop;
+      Router.isActive = noop;
+      let HomeContainerWithContext = stubContext(HomeContainer, { router: Router })
+
+      console.log(stubContext(HomeContainer, {router: Router}))
+      console.log('***')
+      console.log(HomeContainerWithContext)
+
+      let homeWithContext = TestUtils.renderIntoDocument(React.createElement(HomeContainerWithContext, {}))
+      let addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(homeWithContext, 'add-quote')
       TestUtils.Simulate.click(addQuoteButton)
       expect(window.location.pathname).toEqual('/add-quote')
     })
