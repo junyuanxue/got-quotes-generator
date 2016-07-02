@@ -47,6 +47,7 @@ describe('Home', () => {
   describe('add quote button', () => {
     it('has a button that prompts the user to add a new quote', () => {
       let addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'add-quote')
+      console.log(addQuoteButton)
       expect(addQuoteButton).toBeDefined()
     })
 
