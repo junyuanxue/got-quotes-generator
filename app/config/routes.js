@@ -3,6 +3,7 @@ import {hashHistory, Router, Route, IndexRoute} from 'react-router'
 
 import Main from '../containers/Main'
 import HomeContainer from '../containers/HomeContainer'
+import AddQuoteContainer from '../containers/AddQuoteContainer'
 
 let routes = (
   <Router history={hashHistory}>

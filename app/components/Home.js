@@ -16,6 +16,15 @@ function GetQuoteByCharacter (props) {
   )
 }
 
+function AddQuoteButton (props) {
+  return (
+    <button
+      className='add-quote btn btn-success'>
+      Add a New Quote
+    </button>
+  )
+}
+
 function Home (props) {
   return (
     <div className='jumbotron text-center'>
@@ -31,6 +40,7 @@ function Home (props) {
       </div>
       <p className='quote'>{props.quote}</p>
       <p className='character'>{props.character}</p>
+      <AddQuoteButton />
     </div>
   )
 }
