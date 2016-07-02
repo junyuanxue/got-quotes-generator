@@ -3,8 +3,10 @@ import Home from '../components/Home'
 import {getQuote} from '../utils/gotQuotesApi'
 
 class HomeContainer extends React.Component {
-  constructor(props) {
-    super(props);
+
+  constructor(props, context) {
+    super(props)
+    context.router
 
     this.state = {
       quote: '',
@@ -44,6 +46,12 @@ class HomeContainer extends React.Component {
     }
   }
 
+  handleClickAddQuote(event) {
+    event.preventDefault()
+    console.log(this.context)
+    this.context.router.push('/add-quote/')
+  }
+
   render() {
     return (
       <Home
@@ -51,9 +59,14 @@ class HomeContainer extends React.Component {
         onSubmitCharacter={this.handleSubmitCharacter.bind(this)}
         onUpdateCharacter={this.handleUpdateCharacter.bind(this)}
         quote={this.state.quote}
-        character={this.state.character} />
+        character={this.state.character}
+        onClickAddQuote={this.handleClickAddQuote.bind(this)} />
     )
   }
+}
+
+HomeContainer.contextTypes = {
+  router: React.PropTypes.func.isRequired
 }
 
 export default HomeContainer

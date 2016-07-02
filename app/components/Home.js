@@ -19,7 +19,8 @@ function GetQuoteByCharacter (props) {
 function AddQuoteButton (props) {
   return (
     <button
-      className='add-quote btn btn-success'>
+      className='add-quote btn btn-success'
+      onClick={props.onClickAddQuote}>
       Add a New Quote
     </button>
   )
@@ -40,7 +41,8 @@ function Home (props) {
       </div>
       <p className='quote'>{props.quote}</p>
       <p className='character'>{props.character}</p>
-      <AddQuoteButton />
+      <AddQuoteButton
+        onClickAddQuote={props.onClickAddQuote} />
     </div>
   )
 }
@@ -49,6 +51,7 @@ Home.propTypes = {
   onGetQuote: PropTypes.func.isRequired,
   onSubmitCharacter: PropTypes.func.isRequired,
   onUpdateCharacter: PropTypes.func.isRequired,
+  onClickAddQuote: PropTypes.func.isRequired,
   quote: PropTypes.string.isRequired,
   character: PropTypes.string.isRequired
 }
