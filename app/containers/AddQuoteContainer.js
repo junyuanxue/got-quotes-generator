@@ -1,10 +1,10 @@
 import React from 'react'
-import Home from '../components/Home'
+import AddQuote from '../components/addQuote'
 
 class AddQuoteContainer extends React.Component {
   render () {
     return (
-      <div>ADD QUOTE CONTAINER</div>
+      <AddQuote />
     )
   }
 }
