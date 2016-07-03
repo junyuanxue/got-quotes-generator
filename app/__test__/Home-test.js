@@ -1,6 +1,5 @@
 jest.unmock('../containers/HomeContainer')
 jest.unmock('../components/Home')
-jest.unmock('react-stub-context')
 
 import React from 'react'
 import ReactDOM from 'react-dom'
