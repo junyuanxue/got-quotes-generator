@@ -20,7 +20,7 @@ describe('AddQuote', () => {
   })
 
   it('has a character input', () => {
-
+    let characterInput = TestUtils.findRenderedDOMComponentWithClass(addQuote, 'char-input')
   })
 
   it('has a submit button', () => {

@@ -1,8 +1,8 @@
 import React from 'react'
-import AddQuote from '../components/addQuote'
+import AddQuote from '../components/AddQuote'
 
 class AddQuoteContainer extends React.Component {
-  render () {
+  render() {
     return (
       <AddQuote />
     )
