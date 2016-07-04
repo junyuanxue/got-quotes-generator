@@ -22,7 +22,8 @@ function AddQuote (props) {
 
 AddQuote.propTypes = {
   onUpdateQuote: PropTypes.func.isRequired,
-  onUpdateCharacter: PropTypes.func.isRequired
+  onUpdateCharacter: PropTypes.func.isRequired,
+  onSubmitQuote: PropTypes.func.isRequired
 }
 
 export default AddQuote

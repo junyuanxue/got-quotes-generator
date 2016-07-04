@@ -2,19 +2,38 @@ import React from 'react'
 import AddQuote from '../components/AddQuote'
 
 class AddQuoteContainer extends React.Component {
+  constructor(props, context) {
+    super(props)
+    context.router
+
+    this.state = {
+      quote: '',
+      character: '',
+    }
+  }
+
   handleUpdateQuote(event) {
-    console.log(event.target.value)
+    this.setState({
+      quote: event.target.value
+    })
   }
 
   handleUpdateCharacter(event) {
-    console.log(event.target.value)
+    this.setState({
+      character: event.target.value
+    })
+  }
+
+  handleSubmitQuote(event) {
+    console.log(this.state.quote + this.state.character)
   }
 
   render() {
     return (
       <AddQuote
-        onUpdateQuote={this.handleUpdateQuote}
-        onUpdateCharacter={this.handleUpdateCharacter} />
+        onUpdateQuote={this.handleUpdateQuote.bind(this)}
+        onUpdateCharacter={this.handleUpdateCharacter.bind(this)}
+        onSubmitQuote={this.handleSubmitQuote.bind(this)} />
     )
   }
 }
