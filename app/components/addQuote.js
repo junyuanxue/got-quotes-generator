@@ -6,6 +6,9 @@ function AddQuote (props) {
       <textarea
         className='form-control quote-input'
         placeholder='Some epic quote here' />
+      <input
+        className='form-control char-input'
+        placeholder='Who said it?' />
     </div>
   )
 }

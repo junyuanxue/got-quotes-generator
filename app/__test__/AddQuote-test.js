@@ -25,6 +25,7 @@ describe('AddQuote', () => {
   })
 
   it('has a submit button', () => {
-
+    let submitButton = TestUtils.findRenderedDOMComponentWithClass(addQuote, 'submit-quote')
+    expect(submitButton).toBeDefined()
   })
 })
