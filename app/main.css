@@ -39,3 +39,26 @@ body {
   top: 450px;
   left: 50%;
 }
+
+.add-quote-container {
+  margin-top: 10%;
+}
+
+.form-control.quote-input {
+  width: 300px;
+  height: 100px;
+  margin: auto;
+}
+
+.char-input {
+  margin-top: 20px;
+  margin-right: 40px;
+}
+
+.char-input, .submit-quote {
+  display: inline-flex;
+}
+
+.submit-quote {
+  margin-bottom: 0px;
+}

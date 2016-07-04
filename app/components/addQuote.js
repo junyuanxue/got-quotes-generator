@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react'
 
 function AddQuote (props) {
   return (
-    <div className='jumbotron text-center'>
+    <div className='jumbotron text-center add-quote-container'>
       <textarea
         className='form-control quote-input'
         placeholder='Some epic quote here' />
