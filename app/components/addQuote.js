@@ -9,6 +9,11 @@ function AddQuote (props) {
       <input
         className='form-control char-input'
         placeholder='Who said it?' />
+      <button
+        className='btn btn-success submit-quote'
+        onClick={props.onSubmitCharacter}>
+        Submit
+      </button>
     </div>
   )
 }
