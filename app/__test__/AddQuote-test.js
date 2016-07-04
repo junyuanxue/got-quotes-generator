@@ -11,11 +11,12 @@ describe('AddQuote', () => {
   let addQuote
 
   beforeEach(() => {
-    addQuote = TestUtils.renderIntoDocument(<AddQuote />)
+    addQuote = TestUtils.renderIntoDocument(<AddQuoteContainer />)
   })
 
   it('has a quote input', () => {
-
+    let quoteInput = TestUtils.findRenderedDOMComponentWithClass(addQuote, 'quote-input')
+    expect(quoteInput).toBeDefined()
   })
 
   it('has a character input', () => {
@@ -23,6 +24,6 @@ describe('AddQuote', () => {
   })
 
   it('has a submit button', () => {
-    
+
   })
 })

@@ -46,14 +46,12 @@ describe('Home', () => {
   describe('add quote button', () => {
     it('has a button that prompts the user to add a new quote', () => {
       let addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'add-quote')
-      console.log(addQuoteButton)
       expect(addQuoteButton).toBeDefined()
     })
 
     xit('links to the add quote page when add quote button is clicked', () => {
       let addQuoteButton = TestUtils.findRenderedDOMComponentWithClass(home, 'add-quote')
       TestUtils.Simulate.click(addQuoteButton)
-      console.log(home)
       expect(window.location.pathname).toEqual('/add-quote')
     })
   })
