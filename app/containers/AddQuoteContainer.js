@@ -26,7 +26,6 @@ class AddQuoteContainer extends React.Component {
   }
 
   handleSubmitQuote(event) {
-    console.log(this.state.quote + '***' + this.state.character)
     postQuote(this.state.quote, this.state.character)
   }
 
