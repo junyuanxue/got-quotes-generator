@@ -1,6 +1,6 @@
 import React from 'react'
 import AddQuote from '../components/AddQuote'
-// import {postQuote} from '../gotQuotesApi'
+import {postQuote} from '../utils/gotQuotesApi'
 
 class AddQuoteContainer extends React.Component {
   constructor(props, context) {
@@ -26,7 +26,8 @@ class AddQuoteContainer extends React.Component {
   }
 
   handleSubmitQuote(event) {
-    console.log(this.state.quote + this.state.character)
+    console.log(this.state.quote + '***' + this.state.character)
+    postQuote(this.state.quote, this.state.character)
   }
 
   render() {
