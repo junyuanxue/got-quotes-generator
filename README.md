@@ -1,6 +1,6 @@
 # Game of Thrones Quotes Generator
 
-![Imgur](http://i.imgur.com/qXMinvq.png)
+![Imgur](http://i.imgur.com/jwm9Gt9.png)
 
 ## About :crown:
 
@@ -21,7 +21,9 @@ $ npm start
 Visit `http://localhost:8080` in your browser.
 
 It even says 'Hodor':
-![Imgur](http://i.imgur.com/O3EBD3c.png)
+![Imgur](http://i.imgur.com/HWLb17H.png)
+
+You can also add quotes to the database. To download and run the server, please visit [this repo](https://github.com/junyuanxue/got-quotes-rails). Or you can even make your own.
 
 Enjoy! :sunglasses:
 
