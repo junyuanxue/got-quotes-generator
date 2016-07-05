@@ -9,8 +9,8 @@ class HomeContainer extends React.Component {
     context.router
 
     this.state = {
-      quote: '',
-      character: '',
+      quote: this.props.state.quote || '',
+      character: this.props.state.character || '',
       searchCharacter: ''
     }
   }

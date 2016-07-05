@@ -15,12 +15,12 @@ export function getQuote(character) {
 export function postQuote(quote, character) {
   let url = ENDPOINT + '/quotes'
   let quoteData = formatQuoteData(quote, character)
-  $.post(url, quoteData)
+  return $.post(url, quoteData)
     .done(function () {
-      console.log('Post quote success!')
+      console.log('Post quote success! :D')
     })
     .fail(function (error) {
-      console.log('Failure: ' + error)
+      console.log('Failed :(')
     })
 }
 

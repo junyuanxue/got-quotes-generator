@@ -25,8 +25,17 @@ class AddQuoteContainer extends React.Component {
     })
   }
 
-  handleSubmitQuote(event) {
+  handleSubmitQuote() {
     postQuote(this.state.quote, this.state.character)
+      .then(function () {
+        this.context.router.push({
+          pathname: '/',
+          state: {
+            quote: this.state.quote,
+            character: this.state.character
+          }
+        }.bind(this))
+      })
   }
 
   render() {
