@@ -8,10 +8,18 @@ class HomeContainer extends React.Component {
     super(props)
     context.router
 
-    this.state = {
-      quote: this.props.state.quote || '',
-      character: this.props.state.character || '',
-      searchCharacter: ''
+    if (this.props.location.state) {
+      this.state = {
+        quote: this.props.location.state.quote,
+        character: this.props.location.state.character,
+        searchCharacter: ''
+      }
+    } else {
+      this.state = {
+        quote: '',
+        character: '',
+        searchCharacter: ''
+      }
     }
   }
 
