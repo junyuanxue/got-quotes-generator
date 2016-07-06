@@ -35,7 +35,7 @@ class AddQuoteContainer extends React.Component {
             character: this.state.character
           }
         })
-      }.bind(this))
+      })
   }
 
   render() {
