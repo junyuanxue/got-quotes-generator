@@ -1,19 +1,17 @@
 import $ from 'jquery'
 
-const BASE = 'https://got-quotes.herokuapp.com/quotes'
-
-const ENDPOINT = 'http://localhost:3000'
+const ENDPOINT = 'http://localhost:3000/quotes'
 
 export function getQuote(character) {
-  let query = '?char=' + character
-  let url = BASE + query
+  let query = '?character=' + character
+  let url = character === '' ? ENDPOINT : ENDPOINT + query
   return $.get(url, (quoteData) => {
     return quoteData
   })
 }
 
 export function postQuote(quote, character) {
-  let url = ENDPOINT + '/quotes'
+  let url = ENDPOINT
   let quoteData = formatQuoteData(quote, character)
   return $.post(url, quoteData)
     .done(function () {

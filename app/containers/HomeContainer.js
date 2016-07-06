@@ -35,7 +35,7 @@ class HomeContainer extends React.Component {
     getQuote(character)
       .then((quoteData) => {
         this.setState({
-          quote: quoteData.quote,
+          quote: quoteData.content,
           character: quoteData.character
         })
       })
