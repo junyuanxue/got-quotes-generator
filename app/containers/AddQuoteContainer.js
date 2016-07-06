@@ -34,8 +34,8 @@ class AddQuoteContainer extends React.Component {
             quote: this.state.quote,
             character: this.state.character
           }
-        }.bind(this))
-      })
+        })
+      }.bind(this))
   }
 
   render() {
@@ -46,6 +46,10 @@ class AddQuoteContainer extends React.Component {
         onSubmitQuote={this.handleSubmitQuote.bind(this)} />
     )
   }
+}
+
+AddQuoteContainer.contextTypes = {
+  router: React.PropTypes.object.isRequired
 }
 
 export default AddQuoteContainer

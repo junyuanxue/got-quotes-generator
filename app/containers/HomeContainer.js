@@ -9,17 +9,25 @@ class HomeContainer extends React.Component {
     context.router
 
     if (this.props.location.state) {
-      this.state = {
-        quote: this.props.location.state.quote,
-        character: this.props.location.state.character,
-        searchCharacter: ''
-      }
+      this.getStateFromPreviousLocation()
     } else {
-      this.state = {
-        quote: '',
-        character: '',
-        searchCharacter: ''
-      }
+      this.setInitialState()
+    }
+  }
+
+  getStateFromPreviousLocation() {
+    this.state = {
+      quote: this.props.location.state.quote,
+      character: this.props.location.state.character,
+      searchCharacter: ''
+    }
+  }
+
+  setInitialState() {
+    this.state = {
+      quote: '',
+      character: '',
+      searchCharacter: ''
     }
   }
 
