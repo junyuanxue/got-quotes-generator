@@ -52,14 +52,7 @@ class HomeContainer extends React.Component {
   }
 
   handleSubmitCharacter(event) {
-    if (this.state.searchCharacter.toLowerCase() === 'hodor') {
-      this.setState({
-        quote: 'Hodor.',
-        character: 'Hodor'
-      })
-    } else {
-      this.getQuoteAndSetState(this.state.searchCharacter)
-    }
+    this.getQuoteAndSetState(this.state.searchCharacter)
   }
 
   handleClickAddQuote(event) {
